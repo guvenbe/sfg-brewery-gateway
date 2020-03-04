@@ -18,15 +18,12 @@ public class SfgBreweryGatewayApplication {
 
 		return builder.routes()
 				.route(r -> r.path("/api/v1/beer/*", "beerUpc/*")
-						.filters(f -> f.rewritePath("/(?<remains>/?.*)", "/${remains}"))
 						.uri("http://localhost:8080")
 						.id("beer-service"))
 				.route(r -> r.path("/api/v1/beer/*/inventory" )
-						.filters(f -> f.rewritePath("/(?<remains>/?.*)", "/${remains}"))
 						.uri("http://localhost:8082")
 						.id("inventory-service"))
 				.route(r -> r.path(("/api/v1/customers/**"))
-						.filters(f -> f.rewritePath("/(?<remains>/?.*)", "/${remains}"))
 						.uri("http://localhost:8081")
 						.id("order-service"))
 				.build();
