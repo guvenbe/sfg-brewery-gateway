@@ -10,7 +10,7 @@
 
 	<groupId>com.github.sfg-beer-works</groupId>
 	<artifactId>sfg-brewery-gateway</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6-SNAPSHOT</version>
 
 	<name>sfg-brewery-gateway</name>
 	<description>Demo project for Spring Boot</description>
@@ -197,7 +197,7 @@
 		<connection>scm:git:git@github.com:sfg-beer-works/sfg-brewery-gateway.git</connection>
 		<developerConnection>scm:git:git@github.com:sfg-beer-works/sfg-brewery-gateway.git</developerConnection>
 		<url>https://github.com/sfg-beer-works/sfg-brewery-gateway</url>
-		<tag>sfg-brewery-gateway-1.0.5</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
