@@ -25,7 +25,7 @@ public class SfgBreweryGatewayApplication {
 				.build();
 	}
 
-	@Profile("!local-discovery")
+	@Profile({"!local-discovery", "!digitalocean"})
 	@Bean
 	public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
 
