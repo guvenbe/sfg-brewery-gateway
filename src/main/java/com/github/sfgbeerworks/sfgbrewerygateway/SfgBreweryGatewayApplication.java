@@ -42,7 +42,7 @@ public class SfgBreweryGatewayApplication {
 				.build();
 	}
 
-	@Profile("local-discovery")
+	@Profile({"local-discovery", "digitalocean"})
 	@Bean
 	public RouteLocator gatewayRoutesLocalDiscovery(RouteLocatorBuilder builder){
 		return builder.routes()
@@ -64,24 +64,4 @@ public class SfgBreweryGatewayApplication {
 						.id("order-service"))
 				.build();
 	}
-
-
-	//@Configuration
-	//public class Resilience4JConfiguration {
-
-		//@Profile("local-discovery")
-//		@Bean
-//		public FallbackHeadersGatewayFilterFactory fallbackHeadersGatewayFilterFactory() {
-//			return new FallbackHeadersGatewayFilterFactory();
-//		}
-
-		//@Profile("local-discovery")
-//		@Bean
-//		public SpringCloudCircuitBreakerFilterFactory springCloudCircuitBreakerFilterFactory(
-//				ReactiveResilience4JCircuitBreakerFactory reactiveCircuitBreakerFactory,
-//				ObjectProvider<DispatcherHandler> dispatcherHandlers) {
-//			return new SpringCloudCircuitBreakerResilience4JFilterFactory(reactiveCircuitBreakerFactory, dispatcherHandlers);
-//		}
-
-	//}
 }
