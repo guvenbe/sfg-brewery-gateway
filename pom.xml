@@ -224,4 +224,17 @@
             <url>packagecloud+https://packagecloud.io/guvenbe/snapshot</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>guvenbe-release</id>
+            <url>https://packagecloud.io/guvenbe/release/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
