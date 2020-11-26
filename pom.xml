@@ -88,6 +88,16 @@
         </extensions>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                        <includeLayerTools>true</includeLayerTools>
+                    </layers>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.33.0</version>
@@ -184,8 +194,7 @@
                         </executions>
                         <configuration>
                             <!--                Exclude Lombok enhanced classes-->
-                            <excludePackageNames>guru.sfg.brewery.model.*:*.mapper.*:*.domain.*:*.mappers.*
-                            </excludePackageNames>
+                            <excludePackageNames>guru.sfg.brewery.model.*:*.mapper.*:*.domain.*:*.mappers.*</excludePackageNames>
                         </configuration>
                     </plugin>
                     <plugin>
