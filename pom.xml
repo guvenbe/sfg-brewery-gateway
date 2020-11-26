@@ -216,13 +216,13 @@
     </scm>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>packagecloud.release</id>
+            <url>packagecloud+https://packagecloud.io/guvenbe/release</url>
         </repository>
+        <snapshotRepository>
+            <id>packagecloud.snapshot</id>
+            <url>packagecloud+https://packagecloud.io/guvenbe/snapshot</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
